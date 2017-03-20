@@ -28,6 +28,12 @@ def check():
 		arr=line.split()
 		data.append(arr)
 	subprocess.call('rm -f /tmp/'+tmpfile,shell=True)
+
+  datalen = len(data)
+
+  if datalen < 6 :
+    print("UNKNOWN - err ? snmp probably")
+    sys.exit(3)
 		
 	defOutput 			= data[activeIndex][0]+"="+data[activeIndex][1]+""+data[activeIndex][2]
 	perf0	= "'memoryUsage'="+data[0][1]+data[0][2]+";"+options.warning+";"+options.critical

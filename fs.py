@@ -28,6 +28,13 @@ def check():
 		arr=line.split()
 		data.append(arr)
 	subprocess.call('rm -f /tmp/'+tmpfile,shell=True)
+
+  datalen = len(data)
+
+  if datalen < 6 :
+    print("UNKNOWN - err ? probably snmp")
+    sys.exit(3)
+
 	
 	a			= str(int(data[1][1]) - int(data[0][1]))
 	total	= str((int(a) * 100) / int(data[1][1]))
