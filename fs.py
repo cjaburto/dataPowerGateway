@@ -41,7 +41,7 @@ def check():
 	used	= total[:4]
 
 	defOutput	= data[activeIndex][0]+"="+data[activeIndex][1]+""+data[activeIndex][2]
-	perf0	= "'freeEncryptedSpace'="+used+%";"+options.warning+";"+options.critical
+	perf0	= "'freeEncryptedSpace'="+used+"%;"+options.warning+";"+options.critical
 	perf1 = "'totalEncryptedSpace'="+data[1][1]+data[1][2]#+";"+options.warning+";"+options.critical
 	perf2 = "'freeTemporarySpace'="+data[2][1]+data[2][2]#+";"+options.warning+";"+options.critical
 	perf3	= "'totalTemporaySpace'="+data[3][1]+data[3][2]#+";"+options.warning+";"+options.critical
